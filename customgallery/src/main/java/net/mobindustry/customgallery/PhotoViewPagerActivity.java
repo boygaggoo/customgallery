@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import net.mobindustry.customgallery.fragments.PageFragment;
 import net.mobindustry.customgallery.holder.ListFoldersHolder;
 import net.mobindustry.customgallery.utils.Const;
@@ -32,6 +34,8 @@ public class PhotoViewPagerActivity extends FragmentActivity {
     private int photoNumber;
     private FrameLayout send;
     private FrameLayout cancel;
+    private TextView textSend;
+    private TextView textCancel;
     private LinearLayout linearLayout;
 
     public int getPhotoNumber() {
@@ -65,6 +69,10 @@ public class PhotoViewPagerActivity extends FragmentActivity {
         cancel = (FrameLayout) findViewById(R.id.buttonCancelPhoto);
         send.setBackground(CustomGallery.getGalleryOptions().getButtonBackground());
         cancel.setBackground(CustomGallery.getGalleryOptions().getButtonBackground());
+        textSend=(TextView)findViewById(R.id.photoTextButtonSend);
+        textSend.setTextColor(CustomGallery.getGalleryOptions().getTextColorInButtons());
+        textCancel=(TextView)findViewById(R.id.photoTextButtonCancel);
+        textCancel.setTextColor(CustomGallery.getGalleryOptions().getTextColorInButtons());
         toolbar = (Toolbar) findViewById(R.id.toolbar_photo);
         image = (ImageView) findViewById(R.id.photoBig);
         linearLayout=(LinearLayout)findViewById(R.id.layoutViewPager);
@@ -89,7 +97,7 @@ public class PhotoViewPagerActivity extends FragmentActivity {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<String> list = new ArrayList<String>();
+                ArrayList<String> list = new ArrayList<>();
                 for (int i = 0; i < ListFoldersHolder.getListForSending().size(); i++) {
                     list.add(ListFoldersHolder.getListForSending().get(i).getPath());
                 }

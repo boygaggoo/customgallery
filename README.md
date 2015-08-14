@@ -1,5 +1,8 @@
 ### customGallery only photo
-![Screenshot](https://github.com/frontiertsymbal/emoji_keyboard/blob/master/EmojiKeyboard.png)
+![Screenshot](https://github.com/Alytar/customGallery/blob/master/gallery_screen.png)
+![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_unchecked.png)
+![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_checked.png)
+![Screenshot](https://github.com/Alytar/customGallery/blob/master/page_screen.png)
 ## Usage
 ### YourActivity.java
 ``` java

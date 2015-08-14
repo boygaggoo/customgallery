@@ -19,6 +19,7 @@ import android.widget.TextView;
 import net.mobindustry.customgallery.CustomGallery;
 import net.mobindustry.customgallery.PhotoViewPagerActivity;
 import net.mobindustry.customgallery.R;
+import net.mobindustry.customgallery.TransparentActivity;
 import net.mobindustry.customgallery.adapters.FolderAdapter;
 import net.mobindustry.customgallery.holder.ListFoldersHolder;
 import net.mobindustry.customgallery.utils.Utils;
@@ -38,6 +39,7 @@ public class FolderFragment extends Fragment {
     private String nameHolder = "";
     private FragmentTransaction ft;
     private boolean checkToolbar;
+    private TransparentActivity activity;
 
 
     @Nullable
@@ -56,12 +58,14 @@ public class FolderFragment extends Fragment {
         gridList = (GridView) view.findViewById(R.id.gridPhotos);
         gridList.setBackgroundColor(CustomGallery.getGalleryOptions().getColorBackgroundGridView());
         toolbar = (Toolbar) view.findViewById(R.id.toolbar_folder);
+        activity = (TransparentActivity) getActivity();
         return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable final Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        activity.progressBarGone();
         folderAdapter = new FolderAdapter(getActivity(), new FolderAdapter.LoadPhotos() {
             @Override
             public void load() {
@@ -95,7 +99,7 @@ public class FolderFragment extends Fragment {
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<String>list=new ArrayList<String>();
+                ArrayList<String>list=new ArrayList<>();
                 for (int i = 0; i < ListFoldersHolder.getListForSending().size(); i++) {
                     list.add(ListFoldersHolder.getListForSending().get(i).getPath());
                 }
