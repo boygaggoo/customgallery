@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_photo"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height">
+
+    <ImageView
+        android:id="@+id/photoBig"
+        android:layout_width="@dimen/check_size_view_pager"
+        android:layout_height="@dimen/check_size_view_pager"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center|right"
+        android:layout_margin="@dimen/margin_5dp"
+        android:src="@drawable/circle" />
+
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layoutFolder">
+
+    <include
+        layout="@layout/toolbar_folder_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <GridView
+            android:id="@+id/gridPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_4dp"
+            android:gravity="center">
+        </GridView>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:id="@+id/layoutButtons">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_8dp"
+            android:minWidth="@dimen/button_min_width"
+            android:id="@+id/buttonCancelFolder">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/text_cancel"
+                android:gravity="center"
+                android:paddingRight="@dimen/padding_8dp"
+                android:paddingLeft="@dimen/padding_8dp"
+                android:textSize="@dimen/button_text_size"
+                android:id="@+id/folderTextButtonCancel"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_toLeftOf="@+id/buttonCancelFolder"
+            android:layout_marginRight="@dimen/margin_8dp"
+            android:layout_centerVertical="true"
+            android:minWidth="@dimen/button_min_width"
+            android:id="@+id/buttonSendFolder">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/text_send"
+                android:gravity="center"
+                android:paddingRight="@dimen/padding_8dp"
+                android:paddingLeft="@dimen/padding_8dp"
+                android:textSize="@dimen/button_text_size"
+                android:layout_gravity="center"
+                android:id="@+id/folderTextButtonSend"/>
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

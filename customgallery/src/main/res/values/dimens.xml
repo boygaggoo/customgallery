@@ -1,0 +1,21 @@
+<resources>
+    <dimen name="toolbar_height">56dp</dimen>
+    <item name="containerFrag" type="id" />
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="photo_view_back_button_size">45dp</dimen>
+    <dimen name="photo_view_back_button_margin">7dp</dimen>
+    <dimen name="dim_height_grid_item">180dp</dimen>
+    <dimen name="padding_4dp">4dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="button_height">36dp</dimen>
+    <dimen name="button_min_width">88dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="check_size">35dp</dimen>
+    <dimen name="feed_size">48dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="check_size_view_pager">40dp</dimen>
+</resources>
+

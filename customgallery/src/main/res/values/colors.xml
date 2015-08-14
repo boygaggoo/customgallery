@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_action_bar">#5b95c2</color>
+    <color name="background_action_bar_checked">#456589</color>
+    <color name="background_grid">#ffffff</color>
+    <color name="background_activity">#fff</color>
+    <color name="transparent_activity_background">#9f363948</color>
+    <color name="transparent_background">#df090909</color>
+    <color name="feed_color">#80000000</color>
+    <color name="button_pressed_true">#1b75bb</color>
+    <color name="button_pressed_false">#2196f3</color>
+</resources>
