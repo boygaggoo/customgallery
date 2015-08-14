@@ -5,8 +5,8 @@
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/page_screen.png)
 ## Usage
  customGallery has two kinds.
- First type it's default design which you can see on attached screens.
- Second type it's your custom type which you create with help GalleryOptions object(description how to use it see below).
+ * First type it's default design which you can see on attached screens.
+ * Second type it's your custom type which you create with help GalleryOptions object(description how to use it see below).
 ### YourActivity.java
 ``` java
   //Your call button for the customGallery
