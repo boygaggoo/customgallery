@@ -4,6 +4,9 @@
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_checked.png)
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/page_screen.png)
 ## Usage
+ customGallery has two kinds.
+ First type it's default design which you can see on attached screens.
+ Second type it's your custom type which you create with help GalleryOptions object(description how to use it see below).
 ### YourActivity.java
 ``` java
   //Your call button for the customGallery
@@ -14,37 +17,26 @@
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         buttonGallery = (Button) findViewById(R.id.buttonGallery);
-
         //Start service for creating custom gallery thumbnails MUST start at the beginning of your application
         CustomGallery.startCreateThumbsService(this);
-
         //Create options for customGallery(default options)
         GalleryOptions galleryOptions=new GalleryOptions(this);
-
         //Change color for toolbar
         galleryOptions.setColorToolbar(Color.GREEN);
-
         //Change color for toolbar when you click on check(small circle in upper right corner on photo)
         galleryOptions.setColorSelectedToolbar(Color.RED);
-
         //Change main background for customGallery
         galleryOptions.setColorBackground(Color.YELLOW);
-
         //Change grid background for customGallery
         galleryOptions.setColorBackgroundGridView(Color.BLACK);
-
         //Change text color on both buttons
         galleryOptions.setTextColorInButtons(Color.BLUE);
-
         //Change title color in toolbar
         galleryOptions.setTextColorInToolbar(Color.CYAN);
-
         //Change drawable for buttons
         galleryOptions.setButtonBackground(context.getResources().getDrawable(R.drawable.custom_btn));
-
         //Change navigation icon in toolbar(the default is arrow)
         galleryOptions.setDrawableNavigationIconToolbar(getResources().getDrawable(R.drawable.abc_btn_check_material));
-
         //Change drawable under photo
         galleryOptions.setDrawablePlaceHolder(getResources().getDrawable(R.drawable.photo_test));
 
@@ -60,7 +52,6 @@
                         }
                     }
                 });
-
         //start customGallery on your button
         buttonGallery.setOnClickListener(new View.OnClickListener() {
             @Override
