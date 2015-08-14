@@ -83,7 +83,6 @@ public class GalleryOptions {
     }
 
 
-
     public void setColorToolbar(int colorToolbar) {
         this.colorToolbar = colorToolbar;
     }

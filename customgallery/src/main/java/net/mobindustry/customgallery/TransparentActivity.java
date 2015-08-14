@@ -22,13 +22,12 @@ public class TransparentActivity extends AppCompatActivity {
     private ProgressBar progressBar;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transparent_activity);
-        frameLayout=(FrameLayout)findViewById(R.id.transparent_layout);
-        progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        frameLayout = (FrameLayout) findViewById(R.id.transparent_layout);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         frameLayout.setBackgroundColor(CustomGallery.getGalleryOptions().getColorBackground());
         DataHolder.setContext(this);
 
@@ -60,14 +59,14 @@ public class TransparentActivity extends AppCompatActivity {
 
     }
 
-    public void progressBarGone(){
+    public void progressBarGone() {
         progressBar.setVisibility(View.GONE);
     }
 
 
     @Override
     public void onBackPressed() {
-        if (getSupportFragmentManager().findFragmentById(R.id.transparent_content) instanceof FolderFragment){
+        if (getSupportFragmentManager().findFragmentById(R.id.transparent_content) instanceof FolderFragment) {
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             GalleryFragment galleryFragment = new GalleryFragment();
             fragmentTransaction.replace(R.id.transparent_content, galleryFragment);
@@ -76,5 +75,5 @@ public class TransparentActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-    
+
 }

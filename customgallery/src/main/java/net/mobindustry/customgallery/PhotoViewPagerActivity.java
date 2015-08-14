@@ -69,13 +69,13 @@ public class PhotoViewPagerActivity extends FragmentActivity {
         cancel = (FrameLayout) findViewById(R.id.buttonCancelPhoto);
         send.setBackground(CustomGallery.getGalleryOptions().getButtonBackground());
         cancel.setBackground(CustomGallery.getGalleryOptions().getButtonBackground());
-        textSend=(TextView)findViewById(R.id.photoTextButtonSend);
+        textSend = (TextView) findViewById(R.id.photoTextButtonSend);
         textSend.setTextColor(CustomGallery.getGalleryOptions().getTextColorInButtons());
-        textCancel=(TextView)findViewById(R.id.photoTextButtonCancel);
+        textCancel = (TextView) findViewById(R.id.photoTextButtonCancel);
         textCancel.setTextColor(CustomGallery.getGalleryOptions().getTextColorInButtons());
         toolbar = (Toolbar) findViewById(R.id.toolbar_photo);
         image = (ImageView) findViewById(R.id.photoBig);
-        linearLayout=(LinearLayout)findViewById(R.id.layoutViewPager);
+        linearLayout = (LinearLayout) findViewById(R.id.layoutViewPager);
         linearLayout.setBackgroundColor(CustomGallery.getGalleryOptions().getColorBackground());
         pagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         pager.setAdapter(pagerAdapter);
