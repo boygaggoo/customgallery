@@ -20,8 +20,6 @@ import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.GridView;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.mobindustry.customgallery.CustomGallery;
@@ -199,7 +197,6 @@ public class GalleryFragment extends Fragment {
             return inFiles;
         }
         return new ArrayList<File>();
-
     }
 
     private String separateName(String path) {

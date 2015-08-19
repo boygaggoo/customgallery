@@ -1,14 +1,21 @@
-### customGallery only photo
+### customGallery
+ Displays only photos
+
+### Requirements
+ The library requires Android API Level 16+.
+
+### Screenshots
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/gallery_screen.png)
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_unchecked.png)
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_checked.png)
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/page_screen.png)
-## Usage
+
+## Description
  customGallery has two kinds.
  * First type it's default design which you can see on attached screens.
  * Second type it's your custom type which you create with help GalleryOptions object(description how to use it see below).
 
-### YourActivity.java
+### Usage
 ``` java
   //Your call button for the customGallery
     private Button buttonGallery;
