@@ -2,7 +2,7 @@
  Displays only photos
 
 ### Requirements
- The library requires Android API Level 16+.
+ The library requires Android API Level 14+.
 
 ### Screenshots
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/gallery_screen.png)
