@@ -11,14 +11,16 @@
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/page_screen.png)
 
 ## Description
- customGallery has two kinds.
+ customGallery has two types.
  * First type it's default design which you can see on attached screens.
  * Second type it's your custom type which you create with help GalleryOptions object(description how to use it see below).
 
 ### Usage
+    Add code below in your activity for using and adjusting customGallery
 ``` java
   //Your call button for the customGallery
     private Button buttonGallery;
+    private CustomGallery gallery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,7 @@
         //first parameter Context
         //second galleryOptions which can be changed or remain unchanged
         //the third CustomGallery.GalleryClickCallBack() object for to catching event from the button SEND(default text on button)
-        final CustomGallery gallery = new CustomGallery(this, galleryOptions, new CustomGallery.GalleryClickCallBack() {
+        gallery = new CustomGallery(this, galleryOptions, new CustomGallery.GalleryClickCallBack() {
                     @Override
                     public void sendClicked(List<String> list) {
                         for (int i = 0; i < list.size(); i++) {

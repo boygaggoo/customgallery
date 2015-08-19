@@ -17,6 +17,7 @@ import java.util.List;
 public class MainActivity extends Activity {
 
     private Button buttonGallery;
+    private CustomGallery gallery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class MainActivity extends Activity {
         //galleryOptions.setDrawablePlaceHolder(getResources().getDrawable(R.drawable.photo_test));
 
 
-        final CustomGallery gallery = new CustomGallery(this,galleryOptions, new CustomGallery.GalleryClickCallBack() {
+        gallery = new CustomGallery(this,galleryOptions, new CustomGallery.GalleryClickCallBack() {
             @Override
             public void sendClicked(List<String> list) {
                 for (int i = 0; i < list.size(); i++) {
