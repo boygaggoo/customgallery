@@ -1,5 +1,5 @@
 ### customGallery
-This is a simple module which give you all photos and images on your device(except thumbnails).<br>
+This is a simple module gives you a possibility to choose photo/images from your android device(except thumbnails).<br>
 
 ## Description
  customGallery has two types.
