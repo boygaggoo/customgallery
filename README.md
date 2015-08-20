@@ -24,7 +24,8 @@ The library requires Android API Level 14+.
       compile project (':customgallery')
   }
 ```
-* First of all you need start service at the beginning of your application for creating custom thumbnails
+* Before using customGallery you need to start service at the beginning of your application for creating custom thumbnails
+  CustomGallery.startCreateThumbsService(context);
 
 ### Usage
     Add code below in your activity for using and adjusting customGallery
@@ -83,9 +84,10 @@ The library requires Android API Level 14+.
     }
 }
 ```
-### custom_btn.xml
+
 Below you can see mine drawable background resource for buttons(SEND, CANCEL) in customGallery.
 If you want change it you should create your drawable resource and change gallery options (galleryOptions.setButtonBackground()).
+### custom_btn.xml
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
