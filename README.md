@@ -1,10 +1,9 @@
 ### customGallery
- This is a simple module which give you all photos and images on your device(except thumbnails).<br>
+This is a simple module which give you all photos and images on your device(except thumbnails).<br>
 
 ### Requirements
- The library requires Android API Level 14+.
-
- ## Integration
+The library requires Android API Level 14+.
+## Integration
  * Download and unzip the project you've just downloaded
  * Import the customGallery module in your Android Studio project (File > New > Import Module)
  * Add module to build.gradle
@@ -13,7 +12,6 @@
       compile project (':customgallery')
   }
  ```
-
 ### Screenshots
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/gallery_screen.png)
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_unchecked.png)
@@ -83,8 +81,8 @@
 }
 ```
 ### custom_btn.xml
-    Below you can see mine drawable background resource for buttons(SEND, CANCEL) in customGallery.
-    If you want change it you should create your drawable resource and change gallery options (galleryOptions.setButtonBackground()).
+Below you can see mine drawable background resource for buttons(SEND, CANCEL) in customGallery.
+If you want change it you should create your drawable resource and change gallery options (galleryOptions.setButtonBackground()).
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
