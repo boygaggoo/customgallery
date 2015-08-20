@@ -3,6 +3,17 @@ This is a simple module which give you all photos and images on your device(exce
 
 ### Requirements
 The library requires Android API Level 14+.
+## Description
+ customGallery has two types.
+ * First type it's default design which you can see on attached screens.
+ * Second type it's your custom type which you create with help GalleryOptions object(description how to use it see below).
+
+### Screenshots
+![Screenshot](https://github.com/Alytar/customGallery/blob/master/gallery_screen.png)
+![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_unchecked.png)
+![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_checked.png)
+![Screenshot](https://github.com/Alytar/customGallery/blob/master/page_screen.png)
+
 ## Integration
  * First of all you need start service at the beginning of your application for creating custom thumbnails
  * Download and unzip the project you've just downloaded
@@ -13,17 +24,6 @@ The library requires Android API Level 14+.
       compile project (':customgallery')
   }
 ```
-
-### Screenshots
-![Screenshot](https://github.com/Alytar/customGallery/blob/master/gallery_screen.png)
-![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_unchecked.png)
-![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_checked.png)
-![Screenshot](https://github.com/Alytar/customGallery/blob/master/page_screen.png)
-
-## Description
- customGallery has two types.
- * First type it's default design which you can see on attached screens.
- * Second type it's your custom type which you create with help GalleryOptions object(description how to use it see below).
 
 ### Usage
     Add code below in your activity for using and adjusting customGallery
