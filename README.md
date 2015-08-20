@@ -1,8 +1,6 @@
 ### customGallery
 This is a simple module which give you all photos and images on your device(except thumbnails).<br>
 
-### Requirements
-The library requires Android API Level 14+.
 ## Description
  customGallery has two types.
  * First type it's default design which you can see on attached screens.
@@ -13,6 +11,9 @@ The library requires Android API Level 14+.
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_unchecked.png)
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_checked.png)
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/page_screen.png)
+
+### Requirements
+The library requires Android API Level 14+.
 
 ## Integration
  * First of all you need start service at the beginning of your application for creating custom thumbnails
