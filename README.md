@@ -7,11 +7,12 @@ The library requires Android API Level 14+.
  * Download and unzip the project you've just downloaded
  * Import the customGallery module in your Android Studio project (File > New > Import Module)
  * Add module to build.gradle
- ```groovy
+```groovy
   dependencies {
       compile project (':customgallery')
   }
- ```
+```
+
 ### Screenshots
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/gallery_screen.png)
 ![Screenshot](https://github.com/Alytar/customGallery/blob/master/folder_screen_unchecked.png)
