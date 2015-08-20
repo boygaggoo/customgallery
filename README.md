@@ -83,7 +83,7 @@
 }
 ```
 ### custom_btn.xml
-    Below you can see mine drawable background resource for buttons(SEND, CANCEL) in customGallery.<br>
+    Below you can see mine drawable background resource for buttons(SEND, CANCEL) in customGallery.
     If you want change it you should create your drawable resource and change gallery options (galleryOptions.setButtonBackground()).
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
