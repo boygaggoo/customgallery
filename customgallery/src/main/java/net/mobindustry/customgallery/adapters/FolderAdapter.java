@@ -19,7 +19,6 @@ import java.util.ArrayList;
 
 
 public class FolderAdapter extends ArrayAdapter<FileWithIndicator>  {
-    //TODO create a simple animation for button check
     private LayoutInflater inflater;
     private ImageView photo;
     private View.OnClickListener clickListener;
@@ -43,7 +42,7 @@ public class FolderAdapter extends ArrayAdapter<FileWithIndicator>  {
                     ListFoldersHolder.setCheckQuantity(ListFoldersHolder.getCheckQuantity() - 1);
                     loadPhotos.load();
                 } else {
-                    if (ListFoldersHolder.getCheckQuantity()<10){
+                    if (ListFoldersHolder.getCheckQuantity()<Const.QUANTITY_FOR_SENDING){
                         galleryFolder.setCheck(true);
                         ImagesObject imagesObject=new ImagesObject();
                         imagesObject.setPath(galleryFolder.getFile().getAbsolutePath());

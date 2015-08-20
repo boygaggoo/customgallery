@@ -127,7 +127,7 @@ public class GalleryFragment extends Fragment {
                     toolbar.setTitle(R.string.photos);
                     toolbar.setBackgroundColor(CustomGallery.getGalleryOptions().getColorToolbar());
                     AlphaAnimation animation1 = new AlphaAnimation(0.0f, 1.0f);
-                    animation1.setDuration(200);
+                    animation1.setDuration(Const.TIME_ANIM_DURATION);
                     toolbar.setAnimation(animation1);
                 }
             }
@@ -190,7 +190,7 @@ public class GalleryFragment extends Fragment {
         File[] files = parentDir.listFiles();
         if (files != null) {
             for (File file : files) {
-                if (file.getName().endsWith(".jpg")) {
+                if (file.getName().endsWith(Const.FORMAT_JPG)) {
                     inFiles.add(file);
                 }
             }
@@ -207,27 +207,27 @@ public class GalleryFragment extends Fragment {
     }
 
     private void adjustGridViewPortTablet() {
-        gridList.setHorizontalSpacing(4);
-        gridList.setVerticalSpacing(4);
-        gridList.setNumColumns(3);
+        gridList.setHorizontalSpacing((int) getResources().getDimension(R.dimen.grid_horizontal_spacing));
+        gridList.setVerticalSpacing((int) getResources().getDimension(R.dimen.grid_vertical_spacing));
+        gridList.setNumColumns(getResources().getInteger(R.integer.number_grid_list_columns));
     }
 
     private void adjustGridViewLandTablet() {
-        gridList.setHorizontalSpacing(4);
-        gridList.setVerticalSpacing(4);
-        gridList.setNumColumns(4);
+        gridList.setHorizontalSpacing((int) getResources().getDimension(R.dimen.grid_horizontal_spacing));
+        gridList.setVerticalSpacing((int) getResources().getDimension(R.dimen.grid_vertical_spacing));
+        gridList.setNumColumns(getResources().getInteger(R.integer.number_grid_list_columns_tablet_land));
     }
 
     private void adjustGridViewLand() {
-        gridList.setHorizontalSpacing(4);
-        gridList.setVerticalSpacing(4);
-        gridList.setNumColumns(3);
+        gridList.setHorizontalSpacing((int) getResources().getDimension(R.dimen.grid_horizontal_spacing));
+        gridList.setVerticalSpacing((int) getResources().getDimension(R.dimen.grid_vertical_spacing));
+        gridList.setNumColumns(getResources().getInteger(R.integer.number_grid_list_columns));
     }
 
     private void adjustGridViewPort() {
-        gridList.setHorizontalSpacing(4);
-        gridList.setVerticalSpacing(4);
-        gridList.setNumColumns(GridView.AUTO_FIT);
+        gridList.setHorizontalSpacing((int) getResources().getDimension(R.dimen.grid_horizontal_spacing));
+        gridList.setVerticalSpacing((int) getResources().getDimension(R.dimen.grid_vertical_spacing));
+        gridList.setNumColumns(getResources().getInteger(R.integer.number_grid_list_columns_tel_port));
     }
 
     public Map<Long, String> getThumbAll() {
@@ -280,7 +280,7 @@ public class GalleryFragment extends Fragment {
                 if (images.getData() != null) {
                     File file = new File(images.getData());
                     long size = checkSizeInKB(file);
-                    if (size > 50) {
+                    if (size > Const.MIN_SIZE_KB) {
                         listImagesMediaStore.add(images);
                     }
                 } else {
@@ -303,7 +303,7 @@ public class GalleryFragment extends Fragment {
     private List<FileWithIndicator> getPhotosFromFolder(List<ImagesFromMediaStore> list) {
         List<FileWithIndicator> listPhotos = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getData().contains((".jpg")) || list.get(i).getData().contains(".jpeg") || list.get(i).getData().contains(".png")) {
+            if (list.get(i).getData().contains((Const.FORMAT_JPG)) || list.get(i).getData().contains(Const.FORMAT_JPEG) || list.get(i).getData().contains(Const.FORMAT_PNG)) {
                 FileWithIndicator fileWithIndicator = new FileWithIndicator();
                 File file = new File(list.get(i).getData());
                 if (mapForCustomThumbs.get(list.get(i).getId()) != null) {

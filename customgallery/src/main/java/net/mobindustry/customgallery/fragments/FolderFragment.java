@@ -22,6 +22,7 @@ import net.mobindustry.customgallery.R;
 import net.mobindustry.customgallery.TransparentActivity;
 import net.mobindustry.customgallery.adapters.FolderAdapter;
 import net.mobindustry.customgallery.holder.ListFoldersHolder;
+import net.mobindustry.customgallery.utils.Const;
 import net.mobindustry.customgallery.utils.Utils;
 
 import java.util.ArrayList;
@@ -148,7 +149,7 @@ public class FolderFragment extends Fragment {
                     toolbar.setTitle(nameHolder);
                     toolbar.setBackgroundColor(CustomGallery.getGalleryOptions().getColorToolbar());
                     AlphaAnimation animation1 = new AlphaAnimation(0.0f, 1.0f);
-                    animation1.setDuration(200);
+                    animation1.setDuration(Const.TIME_ANIM_DURATION);
                     toolbar.setAnimation(animation1);
                 }
             }
@@ -157,27 +158,27 @@ public class FolderFragment extends Fragment {
     }
 
     private void adjustGridViewPortTablet() {
-        gridList.setHorizontalSpacing(4);
-        gridList.setVerticalSpacing(4);
-        gridList.setNumColumns(3);
+        gridList.setHorizontalSpacing((int) getResources().getDimension(R.dimen.grid_horizontal_spacing));
+        gridList.setVerticalSpacing((int) getResources().getDimension(R.dimen.grid_vertical_spacing));
+        gridList.setNumColumns(getResources().getInteger(R.integer.number_grid_list_columns));
     }
 
     private void adjustGridViewLandTablet() {
-        gridList.setHorizontalSpacing(4);
-        gridList.setVerticalSpacing(4);
-        gridList.setNumColumns(4);
+        gridList.setHorizontalSpacing((int) getResources().getDimension(R.dimen.grid_horizontal_spacing));
+        gridList.setVerticalSpacing((int) getResources().getDimension(R.dimen.grid_vertical_spacing));
+        gridList.setNumColumns(getResources().getInteger(R.integer.number_grid_list_columns_tablet_land));
     }
 
     private void adjustGridViewLand() {
-        gridList.setHorizontalSpacing(4);
-        gridList.setVerticalSpacing(4);
-        gridList.setNumColumns(3);
+        gridList.setHorizontalSpacing((int) getResources().getDimension(R.dimen.grid_horizontal_spacing));
+        gridList.setVerticalSpacing((int) getResources().getDimension(R.dimen.grid_vertical_spacing));
+        gridList.setNumColumns(getResources().getInteger(R.integer.number_grid_list_columns));
     }
 
     private void adjustGridViewPort() {
-        gridList.setHorizontalSpacing(4);
-        gridList.setVerticalSpacing(4);
-        gridList.setNumColumns(GridView.AUTO_FIT);
+        gridList.setHorizontalSpacing((int) getResources().getDimension(R.dimen.grid_horizontal_spacing));
+        gridList.setVerticalSpacing((int) getResources().getDimension(R.dimen.grid_vertical_spacing));
+        gridList.setNumColumns(getResources().getInteger(R.integer.number_grid_list_columns_tel_port));
     }
 
     private void checkDevice() {

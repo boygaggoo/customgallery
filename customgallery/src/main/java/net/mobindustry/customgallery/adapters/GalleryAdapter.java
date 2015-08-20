@@ -45,8 +45,8 @@ public class GalleryAdapter extends ArrayAdapter<FolderCustomGallery> {
                         .placeholder(CustomGallery.getGalleryOptions().getDrawablePlaceHolder()).into(firstPhoto);
             }
             nameFolder.setText(galleryFolder.getName());
-            if (Integer.valueOf(galleryFolder.getPhotosQuantity()) > 1000) {
-                photosFolder.setText("> 1k");
+            if (Integer.valueOf(galleryFolder.getPhotosQuantity()) > Const.ONE_THOUSAND) {
+                photosFolder.setText(R.string.text_1k);
             } else {
                 photosFolder.setText(galleryFolder.getPhotosQuantity());
             }

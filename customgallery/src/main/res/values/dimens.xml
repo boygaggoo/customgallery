@@ -17,5 +17,10 @@
     <dimen name="padding_16dp">16dp</dimen>
     <dimen name="margin_3dp">3dp</dimen>
     <dimen name="check_size_view_pager">40dp</dimen>
+    <dimen name="grid_horizontal_spacing">4dp</dimen>
+    <dimen name="grid_vertical_spacing">4dp</dimen>
+    <integer name="number_grid_list_columns">3</integer>
+    <integer name="number_grid_list_columns_tablet_land">4</integer>
+    <integer name="number_grid_list_columns_tel_port">2</integer>
 </resources>
 

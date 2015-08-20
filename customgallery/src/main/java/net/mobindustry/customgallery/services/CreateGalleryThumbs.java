@@ -97,7 +97,7 @@ public class CreateGalleryThumbs extends Service {
                         int width = options.outWidth;
                         File file = new File(images.getData());
                         long size = checkSizeInKB(file);
-                        if (height > 0 && width > 0 && size > 50) {
+                        if (height > 0 && width > 0 && size > Const.MIN_SIZE_KB) {
                             listImagesMediaStore.add(images);
                         }
                     } else {
@@ -111,7 +111,6 @@ public class CreateGalleryThumbs extends Service {
 
 
         private File createThumb(String path, String name) {
-            final int THUMBSIZE = 150;
             //create a file to write bitmap data
             File file = new File(Const.PATH_TO_THUMBS_GALLERY, name);
             try {
@@ -125,7 +124,7 @@ public class CreateGalleryThumbs extends Service {
             try {
                 Log.e("Log", "Patch " + path);
                 bitmap = BitmapFactory.decodeFile(path);
-                Bitmap thumbImage = ThumbnailUtils.extractThumbnail(bitmap, THUMBSIZE, THUMBSIZE);
+                Bitmap thumbImage = ThumbnailUtils.extractThumbnail(bitmap, Const.THUMBSIZE, Const.THUMBSIZE);
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 thumbImage.compress(Bitmap.CompressFormat.JPEG, 100, stream);
                 byte[] bitMapData = stream.toByteArray();
@@ -141,8 +140,8 @@ public class CreateGalleryThumbs extends Service {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                bitmap = null;
-                System.gc();
+                bitmap.recycle();
+                thumbImage.recycle();
                 return file;
             } catch (Exception e) {
                 Log.e("Log", "Error create thumb");
@@ -155,7 +154,7 @@ public class CreateGalleryThumbs extends Service {
             File[] files = parentDir.listFiles();
             if (files != null) {
                 for (File file : files) {
-                    if (file.getName().endsWith(".jpg")) {
+                    if (file.getName().endsWith(Const.FORMAT_JPG)) {
                         inFiles.add(file);
                     }
                 }
@@ -189,10 +188,10 @@ public class CreateGalleryThumbs extends Service {
         private void fillFolder() {
             for (int i = 0; i < listImagesMediaStore.size(); i++) {
                 if (map.size() == 0) {
-                    createThumb(listImagesMediaStore.get(i).getData(), String.valueOf(listImagesMediaStore.get(i).getId()) + ".jpg");
+                    createThumb(listImagesMediaStore.get(i).getData(), String.valueOf(listImagesMediaStore.get(i).getId()) + Const.FORMAT_JPG);
                 } else {
                     if (map.get(listImagesMediaStore.get(i).getId()) == null) {
-                        createThumb(listImagesMediaStore.get(i).getData(), String.valueOf(listImagesMediaStore.get(i).getId()) + ".jpg");
+                        createThumb(listImagesMediaStore.get(i).getData(), String.valueOf(listImagesMediaStore.get(i).getId()) + Const.FORMAT_JPG);
                     } else {
                         continue;
                     }

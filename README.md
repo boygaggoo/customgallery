@@ -4,6 +4,7 @@ This is a simple module which give you all photos and images on your device(exce
 ### Requirements
 The library requires Android API Level 14+.
 ## Integration
+ * First of all you need start service at the beginning of your application for creating custom thumbnails
  * Download and unzip the project you've just downloaded
  * Import the customGallery module in your Android Studio project (File > New > Import Module)
  * Add module to build.gradle
